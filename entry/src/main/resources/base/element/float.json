@@ -1,0 +1,284 @@
+{
+  "float": [
+    {
+      "name": "font_size_8fp",
+      "value": "8fp"
+    },
+    {
+      "name": "font_size_10fp",
+      "value": "10fp"
+    },
+    {
+      "name": "font_size_12fp",
+      "value": "10fp"
+    },
+    {
+      "name": "font_size_14fp",
+      "value": "14fp"
+    },
+    {
+      "name": "font_size_16fp",
+      "value": "16fp"
+    },
+    {
+      "name": "font_size_20fp",
+      "value": "20fp"
+    },
+    {
+      "name": "font_size_25fp",
+      "value": "25fp"
+    },
+    {
+      "name": "font_size_30fp",
+      "value": "30fp"
+    },
+    {
+      "name": "size_1",
+      "value": "1vp"
+    },
+    {
+      "name": "size_2",
+      "value": "2vp"
+    },
+    {
+      "name": "size_3",
+      "value": "3vp"
+    },
+    {
+      "name": "size_4",
+      "value": "4vp"
+    },
+    {
+      "name": "size_5",
+      "value": "5vp"
+    },
+    {
+      "name": "size_6",
+      "value": "6vp"
+    },
+    {
+      "name": "size_7",
+      "value": "7vp"
+    },
+    {
+      "name": "size_8",
+      "value": "8vp"
+    },
+    {
+      "name": "size_9",
+      "value": "9vp"
+    },
+    {
+      "name": "size_10",
+      "value": "10vp"
+    },
+    {
+      "name": "size_11",
+      "value": "11vp"
+    },
+    {
+      "name": "size_12",
+      "value": "12vp"
+    },
+    {
+      "name": "size_13",
+      "value": "13vp"
+    },
+    {
+      "name": "size_14",
+      "value": "14vp"
+    },
+    {
+      "name": "size_15",
+      "value": "15vp"
+    },
+    {
+      "name": "size_16",
+      "value": "16vp"
+    },
+    {
+      "name": "size_17",
+      "value": "17vp"
+    },
+    {
+      "name": "size_18",
+      "value": "18vp"
+    },
+    {
+      "name": "size_19",
+      "value": "19vp"
+    },
+    {
+      "name": "size_20",
+      "value": "20vp"
+    },
+    {
+      "name": "size_21",
+      "value": "21vp"
+    },
+    {
+      "name": "size_22",
+      "value": "22vp"
+    },
+    {
+      "name": "size_23",
+      "value": "23vp"
+    },
+    {
+      "name": "size_minus_23",
+      "value": "-23vp"
+    },
+    {
+      "name": "size_24",
+      "value": "24vp"
+    },
+    {
+      "name": "size_25",
+      "value": "25vp"
+    },
+    {
+      "name": "size_26",
+      "value": "26vp"
+    },
+    {
+      "name": "size_27",
+      "value": "27vp"
+    },
+    {
+      "name": "size_28",
+      "value": "28vp"
+    },
+    {
+      "name": "size_29",
+      "value": "29vp"
+    },
+    {
+      "name": "size_30",
+      "value": "30vp"
+    },
+    {
+      "name": "size_31",
+      "value": "31vp"
+    },
+    {
+      "name": "size_32",
+      "value": "32vp"
+    },
+    {
+      "name": "size_33",
+      "value": "33vp"
+    },
+    {
+      "name": "size_34",
+      "value": "34vp"
+    },
+    {
+      "name": "size_35",
+      "value": "35vp"
+    },
+    {
+      "name": "size_36",
+      "value": "36vp"
+    },
+    {
+      "name": "size_37",
+      "value": "37vp"
+    },
+    {
+      "name": "size_38",
+      "value": "38vp"
+    },
+    {
+      "name": "size_39",
+      "value": "39vp"
+    },
+    {
+      "name": "size_40",
+      "value": "40vp"
+    },
+    {
+      "name": "size_41",
+      "value": "41vp"
+    },
+    {
+      "name": "size_42",
+      "value": "42vp"
+    },
+    {
+      "name": "size_43",
+      "value": "43vp"
+    },
+    {
+      "name": "size_44",
+      "value": "44vp"
+    },
+    {
+      "name": "size_45",
+      "value": "45vp"
+    },
+    {
+      "name": "size_46",
+      "value": "46vp"
+    },
+    {
+      "name": "size_47",
+      "value": "47vp"
+    },
+    {
+      "name": "size_48",
+      "value": "48vp"
+    },
+    {
+      "name": "size_49",
+      "value": "49vp"
+    },
+    {
+      "name": "size_50",
+      "value": "50vp"
+    },
+    {
+      "name": "size_60",
+      "value": "60vp"
+    },
+    {
+      "name": "size_80",
+      "value": "80vp"
+    },
+    {
+      "name": "size_100",
+      "value": "100vp"
+    },
+    {
+      "name": "size_120",
+      "value": "120vp"
+    },
+    {
+      "name": "size_180",
+      "value": "180vp"
+    },
+    {
+      "name": "size_200",
+      "value": "200vp"
+    },
+    {
+      "name": "size_210",
+      "value": "210vp"
+    },
+    {
+      "name": "size_220",
+      "value": "220vp"
+    },
+    {
+      "name": "size_230",
+      "value": "230vp"
+    },
+    {
+      "name": "size_240",
+      "value": "240vp"
+    },
+    {
+      "name": "size_250",
+      "value": "250vp"
+    }
+  ]
+}

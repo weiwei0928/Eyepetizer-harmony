@@ -1,0 +1,52 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "模块描述"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "EntryAbility_label",
+      "value": "Harmony开眼"
+    },
+    {
+      "name": "font_family_name_fz_lan_ting_hei_s_db1_gb_regular",
+      "value": "fz_lan_ting_hei_s_db1_gb_regular"
+    },
+    {
+      "name": "font_family_src_fz_lan_ting_hei_s_db1_gb_regular",
+      "value": "/font/fz_lan_ting_hei_s_db1_gb_regular.ttf"
+    },
+    {
+      "name": "font_family_name_din_condensed_bold",
+      "value": "din_condensed_bold"
+    },
+    {
+      "name": "font_family_src_din_condensed_bold",
+      "value": "/font/din_condensed_bold.ttf"
+    },
+    {
+      "name": "search_placeholder",
+      "value": "搜索视频、作者、用户及标签"
+    },
+    {
+      "name": "hot_keywords",
+      "value": "热搜关键词"
+    },
+    {
+      "name": "currently_not_supported",
+      "value": "该功能即将开放，敬请期待"
+    },
+    {
+      "name": "login_top_tips",
+      "value": "登录后即可关注作者、\n发表评论、同步收藏视频和播放记录"
+    },
+    {
+      "name": "guide_login_tips",
+      "value": "点击登录即可评论及发布内容"
+    }
+  ]
+}

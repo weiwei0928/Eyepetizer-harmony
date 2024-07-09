@@ -1,0 +1,148 @@
+{
+  "color": [
+    {
+      "name": "white",
+      "value": "#FFFFFF"
+    },
+    {
+      "name": "start_window_background",
+      "value": "#FFFFFF"
+    },
+    {
+      "name": "tab_text_activated",
+      "value": "#007DFF"
+    },
+    {
+      "name": "grid_text_background",
+      "value": "#0C000000"
+    },
+    {
+      "name": "list_text_normal",
+      "value": "#182431"
+    },
+    {
+      "name": "tab_text_normal",
+      "value": "#99182431"
+    },
+    {
+      "name": "search_placeholder_color",
+      "value": "#99182431"
+    },
+    {
+      "name": "sub_text",
+      "value": "#99000000"
+    },
+    {
+      "name": "divider",
+      "value": "#0C000000"
+    },
+    {
+      "name": "list_item_text",
+      "value": "#FF182431"
+    },
+    {
+      "name": "category_background",
+      "value": "#F1F3F5"
+    },
+    {
+      "name": "color_111",
+      "value": "#111111"
+    },
+    {
+      "name": "color_222",
+      "value": "#222222"
+    },
+    {
+      "name": "color_333",
+      "value": "#333333"
+    },
+    {
+      "name": "color_444",
+      "value": "#444444"
+    },
+    {
+      "name": "color_555",
+      "value": "#555555"
+    },
+    {
+      "name": "color_666",
+      "value": "#666666"
+    },
+    {
+      "name": "color_777",
+      "value": "#777777"
+    },
+    {
+      "name": "color_888",
+      "value": "#888888"
+    },
+    {
+      "name": "color_999",
+      "value": "#999999"
+    },
+    {
+      "name": "color_fff",
+      "value": "#ffffff"
+    },
+    {
+      "name": "login_btn_enabled",
+      "value": "#007DFF"
+    },
+    {
+      "name": "login_btn_normal",
+      "value": "#66007DFF"
+    },
+    {
+      "name": "color_66FFFFFF",
+      "value": "#66FFFFFF"
+    },
+    {
+      "name": "color_white",
+      "value": "#ffffff"
+    },
+    {
+      "name": "color_black",
+      "value": "#000000"
+    },
+    {
+      "name": "color_f5f5f5",
+      "value": "#f5f5f5"
+    },
+    {
+      "name": "color_f8f8f8",
+      "value": "#FFF8F8F8"
+    },
+    {
+      "name": "color_red",
+      "value": "#d81e06"
+    },
+    {
+      "name": "color_ededed",
+      "value": "#ededed"
+    },
+    {
+      "name": "color_333333",
+      "value": "#333333"
+    },
+    {
+      "name": "color_4687d7",
+      "value": "#4687d7"
+    },
+    {
+      "name": "color_888888",
+      "value": "#888888"
+    },
+    {
+      "name": "color_444444",
+      "value": "#444444"
+    },
+    {
+      "name": "color_403b47",
+      "value": "#403b47"
+    },
+    {
+      "name": "color_adadad",
+      "value": "#adadad"
+    }
+  ]
+}
