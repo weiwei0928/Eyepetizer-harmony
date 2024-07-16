@@ -1,5 +1,6 @@
 鸿蒙版开眼
 基于api9,主要练习使用ArkTs、ArkUI
+适配api12 切换到分支api12
 
 <img src="https://raw.githubusercontent.com/weiwei0928/Eyepetizer-harmony/main/screenshort/readme.gif" width="25%">
 <br/>
