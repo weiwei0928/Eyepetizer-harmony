@@ -19,12 +19,12 @@ export class SPUtil {
    * @returns
    */
   static async getPreferences(preferenceName: string = defaultPreferenceName) {
-    return await dataPreferences.getPreferences(this.context, preferenceName)
+    return await dataPreferences.getPreferences(SPUtil.context, preferenceName)
   }
 
   static async put(key: string, value: ValueType, preferenceName: string = defaultPreferenceName) {
     // 获取实例
-    let preferences = await this.getPreferences(preferenceName)
+    let preferences = await SPUtil.getPreferences(preferenceName)
     await preferences.put(key, value)
     // 此处一定要flush，否则不能永久序列化到本地
     await preferences.flush()
@@ -38,7 +38,7 @@ export class SPUtil {
    */
   static async get(key: string, defaultValue: ValueType = "", preferenceName: string = defaultPreferenceName) {
     // 获取实例
-    let preferences = await this.getPreferences(preferenceName)
+    let preferences = await SPUtil.getPreferences(preferenceName)
     return preferences.get(key, defaultValue)
   }
 
@@ -49,7 +49,7 @@ export class SPUtil {
    * @returns
    */
   static async delete(key: string, preferenceName: string = defaultPreferenceName) {
-    let preferences = await this.getPreferences(preferenceName)
+    let preferences = await SPUtil.getPreferences(preferenceName)
     return await preferences.delete(key)
   }
 
@@ -59,7 +59,7 @@ export class SPUtil {
    * @returns
    */
   static async clear(preferenceName: string = defaultPreferenceName) {
-    let preferences = await this.getPreferences(preferenceName)
+    let preferences = await SPUtil.getPreferences(preferenceName)
     return await preferences.clear()
   }
 }

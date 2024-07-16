@@ -1,3 +1,42 @@
+interface URL {
+  AUTHOR_LOGIN: string;
+  AUTHOR_REGISTER: string;
+  FORGET_PASSWORD: string;
+  USER_AGREEMENT: string;
+  VIDEO_FUNCTION_STATEMENT: string;
+  LEGAL_NOTICES: string;
+  AUTHOR_OPEN: string;
+  GITHUB_URL: string;
+}
+
+interface GeneratedObjectLiteralInterface_1 {
+  UNKNOWN: number;
+  CUSTOM_HEADER: number;
+  TEXT_CARD_HEADER1: number;
+  TEXT_CARD_HEADER2: number;
+  TEXT_CARD_HEADER3: number;
+  TEXT_CARD_HEADER4: number;
+  TEXT_CARD_HEADER5: number;
+  TEXT_CARD_HEADER6: number;
+  TEXT_CARD_HEADER7: number;
+  TEXT_CARD_HEADER8: number;
+  TEXT_CARD_FOOTER1: number;
+  TEXT_CARD_FOOTER2: number;
+  TEXT_CARD_FOOTER3: number;
+  BANNER: number;
+  BANNER3: number;
+  FOLLOW_CARD: number;
+  TAG_BRIEFCARD: number;
+  TOPIC_BRIEFCARD: number;
+  COLUMN_CARD_LIST: number;
+  VIDEO_SMALL_CARD: number;
+  INFORMATION_CARD: number;
+  AUTO_PLAY_VIDEO_AD: number;
+  HORIZONTAL_SCROLL_CARD: number;
+  SPECIAL_SQUARE_CARD_COLLECTION: number;
+  UGC_SELECTED_CARD_COLLECTION: number;
+  MAX: number;
+}
 
 export class CommonConstant {
 
@@ -28,7 +67,7 @@ export class CommonConstant {
   static readonly WATER_FLOW_COLUMNS_TEMPLATE: string = '1fr 1fr';
 
 
-  public static readonly ItemViewType = {
+  public static readonly ItemViewType: GeneratedObjectLiteralInterface_1 = {
     UNKNOWN: -1, //未知类型，使用EmptyViewHolder容错处理。
 
     CUSTOM_HEADER: 0, //自定义头部类型。
@@ -82,7 +121,7 @@ export class CommonConstant {
     MAX: 100   //避免外部其他类型与此处包含的某个类型重复。
   }
 
-  public static readonly URL = {
+  public static readonly url: URL = {
     AUTHOR_LOGIN: "http://open.eyepetizer.net/#!/login",
 
     AUTHOR_REGISTER: "http://open.eyepetizer.net/#!/register",

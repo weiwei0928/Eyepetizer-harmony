@@ -13,25 +13,25 @@
  * limitations under the License.
  */
 export class PullToRefreshConfigurator {
-  private hasRefresh?: boolean = true; // 是否具有下拉刷新功能
-  private hasLoadMore?: boolean = true; // 是否具有上拉加载功能
-  private maxTranslate?: number = 100; // 可下拉上拉的最大距离
-  private sensitivity?: number = 0.7; // 下拉上拉灵敏度
-  private listIsPlacement?: boolean = true; // 滑动结束后列表是否归位
-  private animDuration?: number = 150; // 滑动结束后，回弹动画执行时间
-  private refreshHeight?: number = 30; // 下拉动画高度
-  private refreshColor?: string = '#000000'; // 下拉动画颜色
-  private refreshBackgroundColor?: ResourceColor = 'rgba(0,0,0,0)'; // 下拉动画区域背景色
-  private refreshTextColor?: ResourceColor = '#999999'; // 下拉加载完毕后提示文本的字体颜色
-  private refreshTextSize?: number | string | Resource = 18; // 下拉加载完毕后提示文本的字体大小
-  private refreshAnimDuration?:number = 1000; // 下拉动画执行一次的时间
-  private loadImgHeight?: number = 30; // 上拉图片高度
-  private loadBackgroundColor?: ResourceColor = 'rgba(0,0,0,0)'; // 上拉动画区域背景色
-  private loadTextColor?: ResourceColor = '#000000'; // 上拉文本的字体颜色
-  private loadTextSize?: number | string | Resource = 16; // 上拉文本的字体大小
-  private loadTextPullUp1?: string = '正在上拉刷新...'; // 上拉1阶段文本
-  private loadTextPullUp2?: string = '放开刷新'; // 上拉2阶段文本
-  private loadTextLoading?: string = '正在玩命加载中...'; // 上拉加载更多中时的文本
+  private hasRefresh: boolean = true; // 是否具有下拉刷新功能
+  private hasLoadMore: boolean = true; // 是否具有上拉加载功能
+  private maxTranslate: number = 100; // 可下拉上拉的最大距离
+  private sensitivity: number = 0.7; // 下拉上拉灵敏度
+  private listIsPlacement: boolean = true; // 滑动结束后列表是否归位
+  private animDuration: number = 150; // 滑动结束后，回弹动画执行时间
+  private refreshHeight: number = 30; // 下拉动画高度
+  private refreshColor: string = '#000000'; // 下拉动画颜色
+  private refreshBackgroundColor: ResourceColor = 'rgba(0,0,0,0)'; // 下拉动画区域背景色
+  private refreshTextColor: ResourceColor = '#999999'; // 下拉加载完毕后提示文本的字体颜色
+  private refreshTextSize: number | string | Resource = 18; // 下拉加载完毕后提示文本的字体大小
+  private refreshAnimDuration:number = 1000; // 下拉动画执行一次的时间
+  private loadImgHeight: number = 30; // 上拉图片高度
+  private loadBackgroundColor: ResourceColor = 'rgba(0,0,0,0)'; // 上拉动画区域背景色
+  private loadTextColor: ResourceColor = '#000000'; // 上拉文本的字体颜色
+  private loadTextSize: number | string | Resource = 16; // 上拉文本的字体大小
+  private loadTextPullUp1: string = '正在上拉刷新...'; // 上拉1阶段文本
+  private loadTextPullUp2: string = '放开刷新'; // 上拉2阶段文本
+  private loadTextLoading: string = '正在玩命加载中...'; // 上拉加载更多中时的文本
 
   setHasRefresh(hasRefresh: boolean) {
     this.hasRefresh = hasRefresh;

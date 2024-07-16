@@ -8,7 +8,7 @@ export struct FollowCard {
   @State data: ItemList = {}
 
   aboutToAppear() {
-    if (this.data?.data?.duration > 60 * 60) {
+    if (this.data?.data?.duration??0 > 60 * 60) {
       this.format = "HH:mm:ss"
     } else {
       this.format = "mm:ss"
@@ -18,16 +18,18 @@ export struct FollowCard {
   build() {
     Column() {
       Stack() {
-        Image(this.data.data?.content?.data?.cover?.feed)
-          // 占位图
+        Image(this.data.data?.content?.data?.cover?.feed)// 占位图
           .alt("#ccededed")
-          .objectFit(ImageFit.Cover)
-            // 图片插值
-          .interpolation(ImageInterpolation.High)
-            // 设置图片的渲染模式为原色
+          .objectFit(ImageFit.Cover)// 图片插值
+          .interpolation(ImageInterpolation.High)// 设置图片的渲染模式为原色
           .renderMode(ImageRenderMode.Original)
           .borderRadius("4vp")
-          .margin({ left: "14vp", top: "10vp", right: "14vp", bottom: "10vp" })
+          .margin({
+            left: "14vp",
+            top: "10vp",
+            right: "14vp",
+            bottom: "10vp"
+          })
 
         if (this.data.data?.content?.data?.library == "DAILY") {
           Image($r("app.media.ic_choiceness"))
@@ -52,7 +54,7 @@ export struct FollowCard {
         }
 
         Stack() {
-          TextTimer({ isCountDown: true, count: this.data?.data?.content?.data?.duration * 1000 })
+          TextTimer({ isCountDown: true, count: this.data?.data?.content?.data?.duration ?? 0 * 1000 })
             .format(this.format)
             .fontColor(Color.White)
             .fontSize("14fp")
@@ -61,7 +63,12 @@ export struct FollowCard {
         .height("20vp")
         .backgroundColor("#cc000000")
         .borderRadius("2vp")
-        .padding({ left: "3.5vp", top: "1vp", right: "3.5vp", bottom: "1vp" })
+        .padding({
+          left: "3.5vp",
+          top: "1vp",
+          right: "3.5vp",
+          bottom: "1vp"
+        })
         .margin({ top: "170vp", right: "19vp" })
       }
       .width(CommonConstant.MATCH_PARENT)
@@ -70,15 +77,12 @@ export struct FollowCard {
 
       Row() {
         Stack() {
-          Image(this.data.data?.header?.icon)
-            // 占位图
+          Image(this.data.data?.header?.icon)// 占位图
             .alt("#ccededed")
             .width("40vp")
             .aspectRatio(1)
-            .objectFit(ImageFit.Cover)
-              // 图片插值
-            .interpolation(ImageInterpolation.High)
-              // 设置图片的渲染模式为原色
+            .objectFit(ImageFit.Cover)// 图片插值
+            .interpolation(ImageInterpolation.High)// 设置图片的渲染模式为原色
             .renderMode(ImageRenderMode.Original)
             .sourceSize({
               width: 40,
@@ -110,7 +114,7 @@ export struct FollowCard {
             .textAlign(TextAlign.Start)
             .width(CommonConstant.MATCH_PARENT)
 
-          Text(this.data.data?.header?.description)
+          Text(this.data.data?.header?.description?.toString())
             .fontColor($r("app.color.color_888888"))
             .fontSize("12fp")
             .fontWeight(FontWeight.Medium)

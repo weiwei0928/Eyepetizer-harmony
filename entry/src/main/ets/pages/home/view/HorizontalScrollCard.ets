@@ -24,7 +24,7 @@ export struct HorizontalScrollCard {
               .renderMode(ImageRenderMode.Original)
               .borderRadius("4vp")
 
-            if (item.data.title != undefined && item.data.title != null) {
+            if (item?.data?.title != undefined && item?.data?.title != null) {
               Stack() {
                 Text(item.data.title)
                   .fontColor(Color.White)

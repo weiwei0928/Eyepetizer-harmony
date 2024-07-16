@@ -1,4 +1,5 @@
 import hilog from '@ohos.hilog';
+import { CommonType } from '@ohos/pulltorefresh/src/main/ets/components/PullToRefresh/TypeAlias';
 
 
 export class Printer {
@@ -12,35 +13,35 @@ export class Printer {
     this.enable = enablePrint
   }
 
-  debug(data: any, prefix?: string, stackTrace?: Error) {
+  debug(data: CommonType, prefix: string, stackTrace?: Error) {
     if (!this.enable) {
       return;
     }
     this.jsonPrint(data, PrinterLevel.DEBUG, prefix, stackTrace)
   }
 
-  info(data: any, prefix?: string, stackTrace?: Error) {
+  info(data: CommonType, prefix: string, stackTrace?: Error) {
     if (!this.enable) {
       return;
     }
     this.jsonPrint(data, PrinterLevel.INFO, prefix, stackTrace)
   }
 
-  warn(data: any, prefix?: string, stackTrace?: Error) {
+  warn(data: CommonType, prefix: string, stackTrace?: Error) {
     if (!this.enable) {
       return;
     }
     this.jsonPrint(data, PrinterLevel.WARN, prefix, stackTrace)
   }
 
-  error(data: any, prefix?: string, stackTrace?: Error) {
+  error(data: CommonType, prefix: string, stackTrace?: Error) {
     if (!this.enable) {
       return;
     }
     this.jsonPrint(data, PrinterLevel.ERROR, prefix, stackTrace)
   }
 
-  private jsonPrint(data: any, level: PrinterLevel, prefix?: string, stackTrace?: Error) {
+  private jsonPrint(data: CommonType, level: PrinterLevel, prefix: string, stackTrace?: Error) {
 
     let top =
       "┌------------------------------------------------------------------------------------------------------------------------------------------┐";
@@ -49,7 +50,7 @@ export class Printer {
 
     if (stackTrace != undefined && stackTrace != null) {
       let stackInfo = stackTrace.stack;
-      stackInfo = "------ " + stackInfo.substring(
+      stackInfo = "------ " + stackInfo?.substring(
         stackInfo.indexOf("(") + 1, stackInfo.lastIndexOf(")")) + " ";
       top = top.replace("-------------------", stackInfo)
       bottom = bottom.replace("-------------------", stackInfo)
@@ -74,7 +75,7 @@ export class Printer {
     this._print(bottom, level, prefix);
   }
 
-  private _print(content: any, level: PrinterLevel, tag: string) {
+  private _print(content: CommonType, level: PrinterLevel, tag: string) {
     switch (level) {
       case PrinterLevel.DEBUG:
         hilog.debug(0x0000, tag, 'DEBUG--> %{public}s', content);

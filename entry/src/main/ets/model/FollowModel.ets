@@ -1,3 +1,4 @@
+import { CommonType } from '@ohos/pulltorefresh/src/main/ets/components/PullToRefresh/TypeAlias';
 import { Author, Consumption, Cover, Provider, Tag, WebUrl } from './VideoBeanForClient';
 
 export interface FollowModel {
@@ -12,14 +13,14 @@ export interface FollowModel {
 export interface Item {
   type?: string;
   data?: Data;
-  tag?: any;
+  tag?: CommonType;
   id?: number;
   adIndex?: number;
 }
 
 
 export interface Data {
-  adTrack?: any;
+  adTrack?: CommonType;
   content?: Content;
   header?: Header;
   dataType?: string;
@@ -33,7 +34,7 @@ export interface Header {
   iconType?: string;
   id?: number;
   issuerName?: string;
-  labelList?: any;
+  labelList?: CommonType;
   showHateVideo?: boolean;
   tagId?: number;
   tagName?: string;
@@ -45,7 +46,7 @@ export interface Header {
 export interface Content {
   type?: string;
   data?: FollowCard;
-  tag?: any;
+  tag?: CommonType;
   id?: number;
   adIndex?: number;
 }
@@ -53,10 +54,10 @@ export interface Content {
 
 export interface FollowCard {
   ad?: boolean,
-  adTrack?: any,
+  adTrack?: CommonType,
   author?: Author,
-  brandWebsiteInfo?: any,
-  campaign?: any,
+  brandWebsiteInfo?: CommonType,
+  campaign?: CommonType,
   category?: string,
   collected?: boolean,
   consumption?: Consumption,
@@ -65,38 +66,38 @@ export interface FollowCard {
   date?: number,
   description?: string,
   descriptionEditor?: string,
-  descriptionPgc?: any,
+  descriptionPgc?: CommonType,
   duration?: number,
-  favoriteAdTrack?: any,
+  favoriteAdTrack?: CommonType,
   id?: number,
   idx?: number,
   ifLimitVideo?: boolean,
-  label?: any,
-  labelList?: any,
-  lastViewTime?: any,
+  label?: CommonType,
+  labelList?: CommonType,
+  lastViewTime?: CommonType,
   library?: string,
   playInfo?: PlayInfo[],
   playUrl?: string,
   played?: boolean,
-  playlists?: any,
-  promotion?: any,
+  playlists?: CommonType,
+  promotion?: CommonType,
   provider?: Provider,
   reallyCollected?: boolean,
   releaseTime?: number,
   remark?: string,
   resourceType?: string,
   searchWeight?: number,
-  shareAdTrack?: any,
-  slogan?: any,
-  src?: any,
-  subtitles?: any,
+  shareAdTrack?: CommonType,
+  slogan?: CommonType,
+  src?: CommonType,
+  subtitles?: CommonType,
   tags?: Tag[],
-  thumbPlayUrl?: any,
+  thumbPlayUrl?: CommonType,
   title?: string,
-  titlePgc?: any,
+  titlePgc?: CommonType,
   type?: string,
-  waterMarks?: any,
-  webAdTrack?: any,
+  waterMarks?: CommonType,
+  webAdTrack?: CommonType,
   webUrl?: WebUrl
 }
 
@@ -104,7 +105,7 @@ export interface Label {
   actionUrl?: string;
   text?: string;
   card?: string;
-  detail?: any;
+  detail?: CommonType;
 }
 export interface PlayInfo {
   height?: number;

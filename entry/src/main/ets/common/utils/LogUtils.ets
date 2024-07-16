@@ -1,5 +1,6 @@
 
 import hilog from '@ohos.hilog';
+import { CommonType } from '@ohos/pulltorefresh/src/main/ets/components/PullToRefresh/TypeAlias';
 import printer from './Printer';
 
 const prefix: string = 'eyepetizer_harmony';
@@ -27,6 +28,6 @@ export function logFatal(...args: string[]) {
   hilog.fatal(domain, prefix, format, args);
 }
 
-export function logJson(data: any, prefix?: string) {
+export function logJson(data: CommonType, prefix: string) {
   printer.info(data, prefix)
 }

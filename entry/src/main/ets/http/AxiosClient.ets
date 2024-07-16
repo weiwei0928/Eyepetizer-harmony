@@ -1,9 +1,9 @@
-import { AxiosError, AxiosRequestHeaders } from '@ohos/axios';
+import { AxiosError, AxiosRequestHeaders, AxiosResponse } from '@ohos/axios';
 import { hideLoadingDialog, showLoadingDialog } from '../common/utils/DialogUtil';
 import { Router } from '../route/Router';
 import { RoutePath } from '../route/RoutePath';
 import showToast from '../common/utils/ToastUtil'
-import AxiosHttpRequest, { errorHandler } from './AxiosHttpRequest'
+import AxiosHttpRequest, { errorHandler, HttpRequestConfig } from './AxiosHttpRequest'
 import deviceInfo from '@ohos.deviceInfo';
 import display from '@ohos.display';
 import { logDebug, loge } from '../common/utils/LogUtils';
@@ -32,10 +32,6 @@ const axiosClient = new AxiosHttpRequest({
   interceptorHooks: {
     requestInterceptor: async (config) => {
       // 在发送请求之前做一些处理，例如打印请求信息
-      if (!config.url.includes("api/v5/index/tab/allRec") && !config.url.includes("api/v3/messages")) {
-        config.params["vc"] = "6030012"
-        config.params["vn"] = "6.3.1"
-      }
       axiosClient.config.showLoading = config.showLoading
       if (config.showLoading) {
         showLoadingDialog()
@@ -49,19 +45,19 @@ const axiosClient = new AxiosHttpRequest({
           if (config.needJumpToLogin) {
             Router.push(RoutePath.LoginPage)
           }
-          throw new AxiosError("请登录")
+          throw new Error("请登录")
         }
       }
       return config;
     },
     requestInterceptorCatch: (err) => {
-      loge("网络请求RequestError", err.toString())
+      loge("网络请求RequestError", err?.toString()??"")
       if (axiosClient.config.showLoading) {
         hideLoadingDialog()
       }
       return err;
     },
-    responseInterceptor: (response) => {
+    responseInterceptor: (response: AxiosResponse) => {
       //优先执行自己的请求响应拦截器，在执行通用请求request的
       if (axiosClient.config.showLoading) {
         hideLoadingDialog()
@@ -69,8 +65,9 @@ const axiosClient = new AxiosHttpRequest({
       logDebug('网络请求Response:', `${response.config.url}`);
       logDebug(response.data, '网络请求响应Response')
       if (response.status === 200) {
-        // @ts-ignore
-        const checkResultCode = response.config.checkResultCode
+        // const checkResultCode = response.config.checkResultCode
+        let config = response.config as HttpRequestConfig
+        const checkResultCode = config.checkResultCode
         if (checkResultCode && response.data.errorCode != 0) {
           showToast(response.data.errorMsg)
           return Promise.reject(response)
@@ -84,7 +81,7 @@ const axiosClient = new AxiosHttpRequest({
       if (axiosClient.config.showLoading) {
         hideLoadingDialog()
       }
-      loge("网络请求响应异常", error.toString())
+      loge("网络请求响应异常", error?.toString()??"")
       errorHandler(error);
       return Promise.reject(error);
     },

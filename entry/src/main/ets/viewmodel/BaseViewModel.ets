@@ -1,3 +1,4 @@
+import { CommonType } from '@ohos/pulltorefresh/src/main/ets/components/PullToRefresh/TypeAlias';
 
 
 export type ResultCallback<T> = (result: T) => void
@@ -10,7 +11,7 @@ export class BaseViewModel {
     return new Promise<T>((resolve, reject) => {
       requestPromise.then((res) => {
         resolve(res)
-      }).catch((error) => {
+      }).catch((error:CommonType) => {
         reject(error)
       })
     });

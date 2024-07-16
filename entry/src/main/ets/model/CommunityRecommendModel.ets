@@ -1,3 +1,4 @@
+import { CommonType } from '@ohos/pulltorefresh/src/main/ets/components/PullToRefresh/TypeAlias';
 import { Label } from './HomeModel';
 import { Consumption, Cover, Tag } from './VideoBeanForClient';
 
@@ -12,18 +13,18 @@ export interface CommunityRecommend {
 export interface ItemList {
   type?: string;
   data?: Data;
-  trackingData?: any;
-  tag?: any;
+  trackingData?: CommonType;
+  tag?: CommonType;
   id?: number;
   adIndex?: number;
 }
 
 export interface Data {
-  adTrack?: any;
+  adTrack?: CommonType;
   content?: Content;
   count?: number;
   dataType?: string;
-  footer?: any;
+  footer?: CommonType;
   header?: Header;
   itemList?: ItemX[];
 }
@@ -35,10 +36,10 @@ export interface Header {
   iconType?: string;
   id?: number;
   issuerName?: string;
-  labelList?: any;
+  labelList?: CommonType;
   showHateVideo?: boolean;
   tagId: number,
-  tagName: any,
+  tagName: CommonType,
   time?: number;
   topShow: boolean
 
@@ -47,8 +48,8 @@ export interface Header {
 export interface Content {
   type?: string;
   data?: DataX;
-  trackingData?: any;
-  tag?: any;
+  trackingData?: CommonType;
+  tag?: CommonType;
   id?: number;
   adIndex?: number;
 }
@@ -56,7 +57,7 @@ export interface Content {
 export interface ItemX {
   data?: DataXX;
   type?: string;
-  tag?: any;
+  tag?: CommonType;
   id?: number;
   adIndex?: number;
 }
@@ -89,10 +90,10 @@ export interface DataX {
   releaseTime?: number,
   resourceType?: string,
   selectedTime?: number,
-  status?: any,
+  status?: CommonType,
   title?: string;
   tags?: Tag[],
-  transId?: any,
+  transId?: CommonType,
   type?: string;
   uid?: number,
   updateTime?: number,
@@ -107,7 +108,7 @@ export interface DataX {
 
 export interface Owner {
   actionUrl?: string,
-  area?: any,
+  area?: CommonType,
   avatar?: string,
   birthday?: number,
   city?: string,
@@ -132,7 +133,7 @@ export interface Owner {
 
 export interface RecentOnceReply {
   actionUrl?: string;
-  contentType?: any;
+  contentType?: CommonType;
   dataType?: string;
   message?: string;
   nickname?: string;
@@ -140,7 +141,7 @@ export interface RecentOnceReply {
 
 export interface DataXX {
   actionUrl?: string,
-  adTrack?: any,
+  adTrack?: CommonType,
   autoPlay?: boolean,
   bgPicture?: string,
   dataType?: string,
@@ -149,23 +150,23 @@ export interface DataXX {
   id?: number;
   image?: string,
   label?: Label,
-  labelList?: any,
+  labelList?: CommonType,
   shade?: boolean,
   subTitle?: string,
   title?: string
 }
 export interface HeaderX {
-  actionUrl?: any,
-  cover?: any,
-  description?: any,
-  font?: any,
-  icon?: any,
+  actionUrl?: CommonType,
+  cover?: CommonType,
+  description?: CommonType,
+  font?: CommonType,
+  icon?: CommonType,
   id?: number,
-  label?: any,
-  labelList?: any,
-  rightText?: any,
-  subTitle?: any,
-  subTitleFont?: any,
+  label?: CommonType,
+  labelList?: CommonType,
+  rightText?: CommonType,
+  subTitle?: CommonType,
+  subTitleFont?: CommonType,
   textAlign?: string,
-  title?: any
+  title?: CommonType
 }

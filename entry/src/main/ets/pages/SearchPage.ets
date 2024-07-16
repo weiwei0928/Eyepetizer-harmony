@@ -91,6 +91,6 @@ struct SearchPage {
     }
     .width(CommonConstant.MATCH_PARENT)
     .height(CommonConstant.MATCH_PARENT)
-    .margin({ top: AppStorage.Get('topHeight') })
+    .margin({ top: AppStorage.get('topHeight') as number })
   }
 }

@@ -5,20 +5,17 @@ export class TabItem {
   /**
    * Tab item index.
    */
-  index: number;
-
+  index: number = 0;
   /**
    * Tab item title.
    */
-  title: string;
-
+  title: string = "";
   /**
    * Image activated.
    */
-  imageActivated: Resource;
-
+  imageActivated: Resource = $r("app.media.background");
   /**
    * Image original.
    */
-  imageOriginal: Resource;
+  imageOriginal: Resource = $r("app.media.background");
 }

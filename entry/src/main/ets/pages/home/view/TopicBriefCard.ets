@@ -26,7 +26,7 @@ export struct TopicBriefCard {
         .margin({ left: "14vp" })
 
       Column({ space: "2vp" }) {
-        Text(this.data?.data.title)
+        Text(this.data?.data?.title)
           .fontColor($r("app.color.color_333333"))
           .fontSize("14fp")
           .fontFamily($r("app.string.font_family_name_fz_lan_ting_hei_s_db1_gb_regular"))
@@ -36,7 +36,7 @@ export struct TopicBriefCard {
           .textAlign(TextAlign.Start)
           .width(CommonConstant.MATCH_PARENT)
 
-        Text(this.data?.data.description)
+        Text(this.data?.data?.description)
           .fontColor($r("app.color.color_888888"))
           .fontSize("12fp")
           .fontWeight(FontWeight.Medium)

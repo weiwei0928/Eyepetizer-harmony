@@ -21,51 +21,51 @@ export struct HomeItem {
   build() {
     Stack() {
       if (this.item.type == "textCard") {
-        if (this.item.data.type == "header5") {
+        if (this.item?.data?.type == "header5") {
           TextCardHeader5({ data: this.item })
-        } else if (this.item.data.type == "header7" || this.item.data.type == "header8") {
+        } else if (this.item?.data?.type == "header7" || this.item?.data?.type == "header8") {
           TextCardHeader7({ data: this.item })
-        } else if (this.item.data.type == "footer2") {
+        } else if (this.item?.data?.type == "footer2") {
           TextCardFooter2({ data: this.item })
-        } else if (this.item.data.type == "footer3") {
+        } else if (this.item?.data?.type == "footer3") {
           TextCardFooter3({ data: this.item })
         }
       } else if (this.item.type == "specialSquareCardCollection") {
-        if (this.item.data.dataType == "ItemCollection") {
+        if (this.item?.data?.dataType == "ItemCollection") {
           SpecialSquareCardCollection({ data: this.item })
         }
       } else if (this.item.type == "columnCardList") {
-        if (this.item.data.dataType == "ItemCollection") {
+        if (this.item?.data?.dataType == "ItemCollection") {
           ColumnCardList({ data: this.item })
         }
       } else if (this.item.type == "horizontalScrollCard") {
-        if (this.item.data.dataType == "HorizontalScrollCard") {
+        if (this.item?.data?.dataType == "HorizontalScrollCard") {
           HorizontalScrollCard({ data: this.item })
         }
       } else if (this.item.type == "videoSmallCard") {
-        if (this.item.data.dataType == "VideoBeanForClient") {
+        if (this.item?.data?.dataType == "VideoBeanForClient") {
           VideoSmallCard({ data: this.item })
         }
       } else if (this.item.type == "briefCard") {
-        if (this.item.data.dataType == "TagBriefCard") {
+        if (this.item?.data?.dataType == "TagBriefCard") {
           TagBriefCard({ data: this.item })
-        } else if (this.item.data.dataType == "TopicBriefCard") {
+        } else if (this.item?.data?.dataType == "TopicBriefCard") {
           TopicBriefCard({ data: this.item })
         }
       } else if (this.item.type == "banner") {
-        if (this.item.data.dataType == "Banner") {
+        if (this.item?.data?.dataType == "Banner") {
           Banner({ data: this.item })
         }
       } else if (this.item.type == "banner3") {
-        if (this.item.data.dataType == "Banner") {
+        if (this.item?.data?.dataType == "Banner") {
           Banner3({ data: this.item })
         }
       } else if (this.item.type == "followCard") {
-        if (this.item.data.dataType == "FollowCard") {
+        if (this.item?.data?.dataType == "FollowCard") {
           FollowCard({ data: this.item })
         }
       } else if (this.item.type == "informationCard") {
-        if (this.item.data.dataType == "InformationCard") {
+        if (this.item?.data?.dataType == "InformationCard") {
           InformationCard({ data: this.item })
         }
       }

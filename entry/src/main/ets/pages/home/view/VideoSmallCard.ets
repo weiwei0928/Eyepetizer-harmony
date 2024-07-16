@@ -8,7 +8,7 @@ export struct VideoSmallCard {
   @State data: ItemList = {}
 
   aboutToAppear() {
-    if (this.data?.data?.duration > 60 * 60) {
+    if (this.data?.data?.duration??0 > 60 * 60) {
       this.format = "HH:mm:ss"
     } else {
       this.format = "mm:ss"
@@ -31,7 +31,7 @@ export struct VideoSmallCard {
           .borderRadius("4vp")
 
         Stack() {
-          TextTimer({ isCountDown: true, count: this.data?.data?.duration * 1000 })
+          TextTimer({ isCountDown: true, count: this.data?.data?.duration??0 * 1000 })
             .format(this.format)
             .fontColor(Color.White)
             .fontSize("14fp")
@@ -47,7 +47,7 @@ export struct VideoSmallCard {
       .alignContent(Alignment.BottomEnd)
 
       Column() {
-        Text(this.data?.data.title)
+        Text(this.data?.data?.title)
           .fontColor($r("app.color.color_333333"))
           .fontSize("14fp")
           .fontFamily($r("app.string.font_family_name_fz_lan_ting_hei_s_db1_gb_regular"))
@@ -64,7 +64,7 @@ export struct VideoSmallCard {
               .fontSize("12fp")
               .margin({ bottom: "6vp" })
           } else {
-            Text("#" + `${this.data?.data.category}`)
+            Text("#" + `${this.data?.data?.category}`)
               .fontColor($r("app.color.color_333333"))
               .fontSize("12fp")
               .margin({ bottom: "6vp" })

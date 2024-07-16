@@ -36,13 +36,20 @@
     "requestPermissions": [
       {
         "name": "ohos.permission.READ_MEDIA",
+        "reason": "$string:internet_reason_desc",
+        "usedScene": {
+          "abilities": [
+            "FormAbility"
+          ],
+          "when":"inuse"
+        }
       },
-      {
-        "name": "ohos.permission.WRITE_MEDIA",
-      },
-      {
-        "name": "ohos.permission.INTERNET"
-      }
+//      {
+//        "name": "ohos.permission.WRITE_MEDIA",
+//      },
+//      {
+//        "name": "ohos.permission.INTERNET"
+//      }
     ]
   }
 }

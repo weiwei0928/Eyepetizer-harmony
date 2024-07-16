@@ -8,7 +8,7 @@ import { HomeItem } from './HomeItem'
 @Component
 export struct DiscoveryPage {
   private url: string = EyepetizerApi.HOME_DISCOVERY
-  private nextPageUrl?: string = null
+  private nextPageUrl?: string = ""
   @State isRefreshing: boolean = false
   @State datas: ItemList[] = []
   @State isTheEnd: boolean = false

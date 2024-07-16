@@ -3,6 +3,7 @@ import router from '@ohos.router'
 import { RoutePath } from '../../route/RoutePath'
 import { Router } from '../../route/Router'
 import common from '@ohos.app.ability.common'
+import { CommonRouteParams } from '../../route/RouteParams'
 
 
 @Entry
@@ -57,17 +58,17 @@ export struct MinePage {
       this.mineItem('通知开关')
       this.mineItem('我的徽章')
       this.mineItem('意见反馈', () => {
-        Router.push(RoutePath.WebPage, { path: CommonConstant.URL.GITHUB_URL })
+        Router.push(RoutePath.WebPage, { path: CommonConstant.url.GITHUB_URL } as CommonRouteParams)
       })
       this.mineItem('我要投稿', () => {
-        Router.push(RoutePath.WebPage, { path: CommonConstant.URL.AUTHOR_OPEN })
+        Router.push(RoutePath.WebPage, { path: CommonConstant.url.AUTHOR_OPEN } as CommonRouteParams)
       })
       Text('version 1.0.0')
         .fontColor($r('app.color.color_888888'))
         .fontSize($r('app.float.font_size_14fp'))
         .margin({ top: $r('app.float.size_40') })
         .onClick(() => {
-          Router.push(RoutePath.WebPage, { path: CommonConstant.URL.GITHUB_URL })
+          Router.push(RoutePath.WebPage, { path: CommonConstant.url.GITHUB_URL } as CommonRouteParams)
         })
 
 

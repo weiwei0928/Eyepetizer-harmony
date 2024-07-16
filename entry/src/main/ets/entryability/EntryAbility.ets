@@ -1,13 +1,16 @@
 import UIAbility from '@ohos.app.ability.UIAbility';
 import hilog from '@ohos.hilog';
 import window from '@ohos.window';
+import { AbilityConstant, Want } from '@kit.AbilityKit';
+
 // import { ImageKnife } from '@ohos/imageknife'
 
 
 export default class EntryAbility extends UIAbility {
-  onCreate(want, launchParam) {
-    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onCreate');
-  }
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    hilog.info(0x0000, 'testTag', '%{public}s', 'EntryAbility onCreate');
+    hilog.info(0x0000, 'testTag', '%{public}s', 'want param:' + JSON.stringify(want) ?? '');
+    hilog.info(0x0000, 'testTag', '%{public}s', 'launchParam:'+ JSON.stringify(launchParam) ?? '');  }
 
   onDestroy() {
     hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onDestroy');
@@ -18,7 +21,6 @@ export default class EntryAbility extends UIAbility {
     hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onWindowStageCreate');
 
     // 1.获取应用主窗口。
-    let windowClass = null;
     windowStage.getMainWindow((err, data) => {
 
       if (err.code) {
@@ -26,7 +28,7 @@ export default class EntryAbility extends UIAbility {
         return;
       }
 
-      windowClass = data;
+      let windowClass = data;
       console.info('Succeeded in obtaining the main window. Data: ' + JSON.stringify(data));
       // 设置窗口的布局是否为全屏显示状态
       windowClass.setWindowLayoutFullScreen(true);
