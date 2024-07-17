@@ -31,7 +31,7 @@ export struct DailyPage {
     this.getData(false)
   }
 
-  getData(onRefresh: boolean): Promise<void>{
+  getData(onRefresh: boolean): Promise<void> {
     return dailyViewModel.getDailyData(this.nextPageUrl, (result) => {
       if (onRefresh) {
         this.data = result.itemList

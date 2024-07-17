@@ -51,6 +51,10 @@
     {
       "name": "internet_reason_desc",
       "value": "申请网络权限"
+    },
+    {
+      "name": "write_media_reason_desc",
+      "value": "缓存文件"
     }
   ]
 }
