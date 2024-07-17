@@ -1,6 +1,9 @@
 鸿蒙版开眼
 基于api9,主要练习使用ArkTs、ArkUI
-适配api12 切换到分支api12
+
+已适配api12 切换到分支api12查看
+
+（发现开眼的图片链接失效的越来越多了）
 
 <img src="https://raw.githubusercontent.com/weiwei0928/Eyepetizer-harmony/main/screenshort/readme.gif" width="25%">
 <br/>
