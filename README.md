@@ -5,6 +5,8 @@
 
 （发现开眼的图片链接失效的越来越多了）
 
+鸿蒙学习笔记:https://blog.csdn.net/qq_36017595?spm=1010.2135.3001.5343
+
 <img src="https://raw.githubusercontent.com/weiwei0928/Eyepetizer-harmony/main/screenshort/readme.gif" width="25%">
 <br/>
 <div style="display: flex; flex-direction: row">
