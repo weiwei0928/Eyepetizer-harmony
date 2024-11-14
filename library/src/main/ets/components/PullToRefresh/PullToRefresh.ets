@@ -1,18 +1,6 @@
-/*
- * Copyright (C) 2022 Huawei Device Co., Ltd.
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+
 import { PullToRefreshConfigurator } from './PullToRefreshConfigurator'
+import { CommonType } from './TypeAlias';
 
 const IS_FREE = 0;
 const IS_PULL_DOWN_1 = 11;
@@ -25,28 +13,25 @@ const IS_LOADING = 5;
 
 @Component
 export struct PullToRefresh {
-  @Link data: any;
-  scroller: Scroller;
+  @Link data: CommonType;
+  scroller: Scroller = new Scroller();
   @BuilderParam customList: () => void;
-  refreshConfigurator?: PullToRefreshConfigurator;
-  mWidth?: Length = '100%';
-  mHeight?: Length = '100%';
-  onRefresh?: () => Promise<any> = () => {
-    return new Promise<any>((resolve, reject) => {
-      setTimeout(() => {
-        resolve('刷新失败');
-      }, 1000);
+  refreshConfigurator: PullToRefreshConfigurator = new PullToRefreshConfigurator();
+
+  mWidth: Length = '100%';
+  mHeight: Length = '100%';
+  onRefresh: () => Promise<void> = () => {
+    return new Promise<void>((resolve, reject) => {
+
     });
   };
-  onLoadMore?: () => Promise<any> = () => {
-    return new Promise<any>((resolve, reject) => {
-      setTimeout(() => {
-        resolve('');
-      }, 1000);
+  onLoadMore: () => Promise<void> = () => {
+    return new Promise<void>((resolve, reject) => {
+
     });
   };
   // 自定义下拉动画
-  @BuilderParam customRefresh?: () => void;
+  @BuilderParam customRefresh: () => void;
   onAnimPullDown?: (value?: number, width?: number, height?: number) => void;
   onAnimRefreshing?: (value?: number, width?: number, height?: number) => void;
   // 自定义上拉动画
@@ -54,31 +39,31 @@ export struct PullToRefresh {
   onAnimPullUp?: (value?: number, width?: number, height?: number) => void;
   onAnimLoading?: (value?: number, width?: number, height?: number) => void;
   //-----------------------------以下为组件内自用属性-----------------------------//
-  @State private mHeightNumber?: number = 0;
-  @State private trYTop?: number = 0;
-  @State private trYBottom?: number = 0;
-  @State private state?: number = IS_FREE;
-  @State private refreshText?: string = '下拉可以刷新';
+  @State private mHeightNumber: number = 0;
+  @State private trYTop: number = 0;
+  @State private trYBottom: number = 0;
+  @State private state: number = IS_FREE;
+  @State private refreshText: string = '下拉可以刷新';
   private refreshTextDefalut: string = '下拉可以刷新';
-  @State private loadText?: string = '';
-  @State private angle1?: number = 0;
-  @State private angle2?: number = 0;
-  private mWidthNumber?: number = 0;
-  private touchYOld?: number = 0;
-  private touchYNew?: number = 0;
-  private listOffsetOld?: number = 0;
-  private listOffsetNew?: number = 0;
-  private canvasSetting?: RenderingContextSettings = new RenderingContextSettings(true);
-  private canvasRefresh?: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.canvasSetting);
-  private value?: number = 0;
-  private timer?: number;
-  private refreshRingOx?: number = 0;
-  private refreshRingOy?: number = 0;
-  private refreshRingRadius?: number = 0;
-  private refreshPoint1x?: number = 0;
-  private refreshPoint1y?: number = 0;
-  private refreshPoint2x?: number = 0;
-  private refreshPoint2y?: number = 0;
+  @State private loadText: string = '';
+  @State private angle1: number = 0;
+  @State private angle2: number = 0;
+  private mWidthNumber: number = 0;
+  private touchYOld: number = 0;
+  private touchYNew: number = 0;
+  private listOffsetOld: number = 0;
+  private listOffsetNew: number = 0;
+  private canvasSetting: RenderingContextSettings = new RenderingContextSettings(true);
+  private canvasRefresh: CanvasRenderingContext2D = new CanvasRenderingContext2D(this.canvasSetting);
+  private value: number = 0;
+  private timer: number = 0;
+  private refreshRingOx: number = 0;
+  private refreshRingOy: number = 0;
+  private refreshRingRadius: number = 0;
+  private refreshPoint1x: number = 0;
+  private refreshPoint1y: number = 0;
+  private refreshPoint2x: number = 0;
+  private refreshPoint2y: number = 0;
   private panOption: PanGestureOptions = new PanGestureOptions({ direction: PanDirection.Up | PanDirection.Down })
   private lastRefreshOffset: number = 0.0
 
@@ -250,7 +235,7 @@ export struct PullToRefresh {
 
         if (this.refreshConfigurator.getHasRefresh()) {
           // 获取最新位移距离
-          var trY = this.touchYNew - this.touchYOld;
+          let trY = this.touchYNew - this.touchYOld;
           // 计算当前需要位移的总距离
           this.trYTop = this.getTranslateYOfRefresh(trY);
           if (this.trYTop < this.refreshConfigurator.getRefreshHeight()) {
@@ -281,7 +266,7 @@ export struct PullToRefresh {
         if ((this.state == IS_FREE && this.listOffsetOld == this.listOffsetNew && this.listOffsetOld != 0 && this.touchYNew < this.touchYOld) ||
         this.state == IS_PULL_UP_1 || this.state == IS_PULL_UP_2) {
           // 获取最新的位移距离
-          var trY = this.touchYNew - this.touchYOld;
+          let trY = this.touchYNew - this.touchYOld;
           // 计算当前需要位移的总距离
           this.trYBottom = this.getTranslateYOfLoadMore(trY);
           if (this.trYBottom > -this.refreshConfigurator.getLoadImgHeight()) {
@@ -392,8 +377,8 @@ export struct PullToRefresh {
   }
 
   private getTranslateYOfRefresh(newTranslateY: number): number {
-    var maxTranslateY = this.refreshConfigurator.getMaxTranslate();
-    var sensitivity = this.refreshConfigurator.getSensitivity();
+    let maxTranslateY = this.refreshConfigurator.getMaxTranslate();
+    let sensitivity = this.refreshConfigurator.getSensitivity();
     // 阻尼值计算
     if (this.trYTop / maxTranslateY < 0.2) {
       newTranslateY = newTranslateY * 1 * sensitivity;
@@ -417,8 +402,8 @@ export struct PullToRefresh {
   }
 
   private getTranslateYOfLoadMore(newTranslateY: number): number {
-    var maxTranslateY = this.refreshConfigurator.getMaxTranslate();
-    var sensitivity = this.refreshConfigurator.getSensitivity();
+    let maxTranslateY = this.refreshConfigurator.getMaxTranslate();
+    let sensitivity = this.refreshConfigurator.getSensitivity();
     // 阻尼值计算
     if (this.trYBottom / maxTranslateY > -0.2) {
       newTranslateY = newTranslateY * 1 * sensitivity;

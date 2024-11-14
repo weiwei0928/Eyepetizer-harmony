@@ -10,7 +10,7 @@ import FlowItemComponent from './FlowItemComponent';
 export struct CommendPage {
   private scroller: Scroller = new Scroller();
   private url: string = EyepetizerApi.COMMUNITY_RECOMMEND_URL
-  private nextPageUrl?: string = null
+  private nextPageUrl?: string = ""
   @State isRefreshing: boolean = false
   @State data: ItemList[] = []
   @State waterFlowData: ItemList[] = []
@@ -21,7 +21,7 @@ export struct CommendPage {
     this.getData(false)
   }
 
-  getData(onRefresh: boolean) {
+  getData(onRefresh: boolean): Promise<void> {
     if (onRefresh) {
       this.nextPageUrl = this.url
     }

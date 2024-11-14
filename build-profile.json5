@@ -1,41 +1,41 @@
 {
   "app": {
-//    "signingConfigs": [
-//      {
-//        "name": "default",
-//        "type": "HarmonyOS",
-//        "material": {
-//          "certpath": "/Users/ledu/.ohos/config/auto_debug_eyepetizer-harmony_com.ww.eyepetizer_350086000121423064.cer",
-//          "storePassword": "0000001BACAE1B91F836986216F5E51E2979BC85E33FF5046A39AC22D848689B0291C60C6E74D5D8DC9FCC",
-//          "keyAlias": "debugKey",
-//          "keyPassword": "0000001BA1CE77C1D3287D2D4D2865BCF8FF78998B0AE6D054FBBE96CD0930D2909E13EC716723FCC157CE",
-//          "profile": "/Users/ledu/.ohos/config/auto_debug_eyepetizer-harmony_com.ww.eyepetizer_350086000121423064.p7b",
-//          "signAlg": "SHA256withECDSA",
-//          "storeFile": "/Users/ledu/.ohos/config/auto_debug_eyepetizer-harmony_com.ww.eyepetizer_350086000121423064.p12"
-//        }
-//      }
-//    ],
-        "signingConfigs": [
-          {
-            "name": "default",
-            "type": "HarmonyOS",
-            "material": {
-              "certpath": "/Users/weiwei/.ohos/config/auto_debug_Eyepetizer_harmony_com.ww.eyepetizer_350086000121423064.cer",
-              "storePassword": "0000001A87C22D5BCCD3457DB2F9CBD53B80773801B6AA48840A4A08AFB1AD3ECF8C7AADD5CBB6C3BE24",
-              "keyAlias": "debugKey",
-              "keyPassword": "0000001AE0339ADEA6387948B709E966B4C29F8AEE09F3328E53D43AC7069D7EB09FE018A35DA92DF69D",
-              "profile": "/Users/weiwei/.ohos/config/auto_debug_Eyepetizer_harmony_com.ww.eyepetizer_350086000121423064.p7b",
-              "signAlg": "SHA256withECDSA",
-              "storeFile": "/Users/weiwei/.ohos/config/auto_debug_Eyepetizer_harmony_com.ww.eyepetizer_350086000121423064.p12"
-            }
-          }
-        ],
-    "compileSdkVersion": 9,
-    "compatibleSdkVersion": 9,
+    //    "signingConfigs": [
+    //      {
+    //        "name": "default",
+    //        "type": "HarmonyOS",
+    //        "material": {
+    //          "certpath": "/Users/ledu/.ohos/config/auto_debug_eyepetizer-harmony_com.ww.eyepetizer_350086000121423064.cer",
+    //          "storePassword": "0000001BACAE1B91F836986216F5E51E2979BC85E33FF5046A39AC22D848689B0291C60C6E74D5D8DC9FCC",
+    //          "keyAlias": "debugKey",
+    //          "keyPassword": "0000001BA1CE77C1D3287D2D4D2865BCF8FF78998B0AE6D054FBBE96CD0930D2909E13EC716723FCC157CE",
+    //          "profile": "/Users/ledu/.ohos/config/auto_debug_eyepetizer-harmony_com.ww.eyepetizer_350086000121423064.p7b",
+    //          "signAlg": "SHA256withECDSA",
+    //          "storeFile": "/Users/ledu/.ohos/config/auto_debug_eyepetizer-harmony_com.ww.eyepetizer_350086000121423064.p12"
+    //        }
+    //      }
+    //    ],
+    "signingConfigs": [
+      {
+        "name": "default",
+        "type": "HarmonyOS",
+        "material": {
+          "certpath": "/Users/weiwei/.ohos/config/auto_debug_Eyepetizer_harmony_com.ww.eyepetizer_350086000121423064.cer",
+          "storePassword": "0000001A87C22D5BCCD3457DB2F9CBD53B80773801B6AA48840A4A08AFB1AD3ECF8C7AADD5CBB6C3BE24",
+          "keyAlias": "debugKey",
+          "keyPassword": "0000001AE0339ADEA6387948B709E966B4C29F8AEE09F3328E53D43AC7069D7EB09FE018A35DA92DF69D",
+          "profile": "/Users/weiwei/.ohos/config/auto_debug_Eyepetizer_harmony_com.ww.eyepetizer_350086000121423064.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "/Users/weiwei/.ohos/config/auto_debug_Eyepetizer_harmony_com.ww.eyepetizer_350086000121423064.p12"
+        }
+      }
+    ],
     "products": [
       {
         "name": "default",
         "signingConfig": "default",
+        "compatibleSdkVersion": "4.1.0(11)",
+        "runtimeOS": "HarmonyOS"
       }
     ]
   },

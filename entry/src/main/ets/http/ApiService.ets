@@ -1,3 +1,4 @@
+import { CommonType } from '@ohos/pulltorefresh/src/main/ets/components/PullToRefresh/TypeAlias'
 import { CommunityRecommend } from '../model/CommunityRecommendModel'
 import { FollowModel } from '../model/FollowModel'
 import { HomeModel } from '../model/HomeModel'
@@ -5,7 +6,7 @@ import axiosClient from './AxiosClient'
 import { EyepetizerApi } from './EyepetizerApi'
 
 export class ApiService {
-  getHomeData(url: string) {
+  getHomeData(url?: string) {
     return axiosClient.get<HomeModel>({
       url: url,
       showLoading: false,
@@ -19,21 +20,21 @@ export class ApiService {
     })
   }
 
-  getDailyData(url: string) {
+  getDailyData(url?: string) {
     return axiosClient.get<HomeModel>({
       url: url,
       showLoading: false,
     })
   }
 
-  getRecommendData(url: string) {
+  getRecommendData(url?: string) {
     return axiosClient.get<CommunityRecommend>({
       url: url,
       showLoading: true
     })
   }
 
-  getFollowData(url: string) {
+  getFollowData(url?: string) {
     return axiosClient.get<FollowModel>({
       url: url,
       showLoading: false

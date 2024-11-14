@@ -5,6 +5,7 @@ import axios, {
   InternalAxiosRequestConfig,
   AxiosError,
 } from "@ohos/axios";
+import { CommonType } from '@ohos/pulltorefresh/src/main/ets/components/PullToRefresh/TypeAlias';
 import { loge } from '../common/utils/LogUtils';
 import showToast from '../common/utils/ToastUtil';
 
@@ -17,24 +18,21 @@ import showToast from '../common/utils/ToastUtil';
  */
 interface InterceptorHooks {
   requestInterceptor?: (config: HttpRequestConfig) => Promise<HttpRequestConfig>;
-  requestInterceptorCatch?: (error: any) => any;
-  // @ts-ignore
+  requestInterceptorCatch?: (error: CommonType) => CommonType;
   responseInterceptor?: (response: AxiosResponse) => AxiosResponse | Promise<AxiosResponse>;
-  responseInterceptorCatch?: (error: any) => any;
+  responseInterceptorCatch?: (error: CommonType) => CommonType;
 }
 
 
 /**
  * 这里主要是高版本的axios中设置拦截器的时候里面的Config属性必须是InternalAxiosRequestConfig，但是InternalAxiosRequestConfig里面的headers是必传，所以在实现的子类设置成非必传会报错，加了个忽略注解
  */
-// @ts-ignore
-interface HttpRequestConfig extends InternalAxiosRequestConfig {
+export interface HttpRequestConfig extends InternalAxiosRequestConfig {
   showLoading?: boolean; // 是否展示请求loading
   checkResultCode?: boolean; // 是否检验响应结果码
   checkLoginState?: boolean // 校验用户登陆状态
   needJumpToLogin?: boolean // 是否需要跳转到登陆页面
   interceptorHooks?: InterceptorHooks;
-  headers?: AxiosRequestHeaders
 }
 
 /**
@@ -44,7 +42,6 @@ interface HttpRequestConfig extends InternalAxiosRequestConfig {
 class AxiosHttpRequest {
   config: HttpRequestConfig;
   interceptorHooks?: InterceptorHooks;
-  // @ts-ignore
   instance: AxiosInstance;
 
   constructor(options: HttpRequestConfig) {
@@ -57,7 +54,6 @@ class AxiosHttpRequest {
 
   setupInterceptor(): void {
     this.instance.interceptors.request.use(
-      // @ts-ignore
       this.interceptorHooks?.requestInterceptor,
       this.interceptorHooks?.requestInterceptorCatch,
     );
@@ -68,16 +64,16 @@ class AxiosHttpRequest {
   }
 
   // 类型参数的作用，T决定AxiosResponse实例中data的类型
-  request<T = any>(config?: HttpRequestConfig): Promise<T> {
+  request<T = CommonType>(config?: HttpRequestConfig): Promise<T> {
     return new Promise<T>((resolve, reject) => {
       this.instance
         // 发送请求
-        .request<any, T>(config)
+        .request<CommonType, T>(config)
         .then(res => {
           resolve(res);
         })
-        .catch((err) => {
-          loge("网络请求Request异常：", err.message)
+        .catch((err:CommonType) => {
+          loge("网络请求Request异常：", err?.toString()??"")
           errorHandler(err)
           if (err) {
             reject(err);
@@ -91,44 +87,34 @@ class AxiosHttpRequest {
    * @param config
    * @returns
    */
-  get<T = any>(config?: HttpRequestConfig): Promise<T> {
-    return this.request({ ...config, method: 'GET' });
+  // get<T = CommonType>(config?: HttpRequestConfig): Promise<T> {
+  //   return this.request({ ...config, method: 'GET' });
+  // }
+  get<T = CommonType>(config: HttpRequestConfig): Promise<T> {
+    config.method = 'GET'
+    return this.request(config);
   }
 
-  /**
-   * 发送post请求
-   * @param config
-   * @returns
-   */
-  post<T = any>(config?: HttpRequestConfig): Promise<T> {
-    return this.request({ ...config, method: 'POST' });
+  post<T = CommonType>(config: HttpRequestConfig): Promise<T> {
+    config.method = 'POST'
+    return this.request(config);
   }
 
-  /**
-   * 发送delete请求
-   * @param config
-   * @returns
-   */
-  delete<T = any>(config?: HttpRequestConfig): Promise<T> {
-    return this.request({ ...config, method: 'DELETE' });
+  delete<T = CommonType>(config: HttpRequestConfig): Promise<T> {
+    config.method = 'DELETE'
+    return this.request(config);
   }
 
-  /**
-   * 发送put请求
-   * @param config
-   * @returns
-   */
-  patch<T = any>(config?: HttpRequestConfig): Promise<T> {
-    return this.request({ ...config, method: 'PATCH' });
+  patch<T = CommonType>(config: HttpRequestConfig): Promise<T> {
+    config.method = 'PATCH'
+    return this.request(config);
   }
 }
 
 export default AxiosHttpRequest
 
-export function errorHandler(error: any) {
+export function errorHandler(error: CommonType) {
   if (error instanceof AxiosError) {
     showToast(error.message)
-  } else if (error != undefined && error.response != undefined && error.response.status) {
-    showToast(error.response.data.message)
   }
 }

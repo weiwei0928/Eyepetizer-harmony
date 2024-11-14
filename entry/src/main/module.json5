@@ -36,9 +36,23 @@
     "requestPermissions": [
       {
         "name": "ohos.permission.READ_MEDIA",
+        "reason": "$string:internet_reason_desc",
+        "usedScene": {
+          "abilities": [
+            "FormAbility"
+          ],
+          "when":"inuse"
+        }
       },
       {
         "name": "ohos.permission.WRITE_MEDIA",
+        "reason": "$string:write_media_reason_desc",
+        "usedScene": {
+          "abilities": [
+            "FormAbility"
+          ],
+          "when":"inuse"
+        }
       },
       {
         "name": "ohos.permission.INTERNET"

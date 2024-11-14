@@ -1,3 +1,13 @@
+interface URL {
+  AUTHOR_LOGIN: string;
+  AUTHOR_REGISTER: string;
+  FORGET_PASSWORD: string;
+  USER_AGREEMENT: string;
+  VIDEO_FUNCTION_STATEMENT: string;
+  LEGAL_NOTICES: string;
+  AUTHOR_OPEN: string;
+  GITHUB_URL: string;
+}
 
 export class CommonConstant {
 
@@ -28,61 +38,7 @@ export class CommonConstant {
   static readonly WATER_FLOW_COLUMNS_TEMPLATE: string = '1fr 1fr';
 
 
-  public static readonly ItemViewType = {
-    UNKNOWN: -1, //未知类型，使用EmptyViewHolder容错处理。
-
-    CUSTOM_HEADER: 0, //自定义头部类型。
-
-    TEXT_CARD_HEADER1: 1,
-
-    TEXT_CARD_HEADER2: 2,
-
-    TEXT_CARD_HEADER3: 3,
-
-    TEXT_CARD_HEADER4: 4, //type:textCard -> dataType:TextCard,type:header4
-
-    TEXT_CARD_HEADER5: 5, //type:textCard -> dataType:TextCard -> type:header5
-
-    TEXT_CARD_HEADER6: 6,
-
-    TEXT_CARD_HEADER7: 7, //type:textCard -> dataType:TextCardWithRightAndLeftTitle,type:header7
-
-    TEXT_CARD_HEADER8: 8, //type:textCard -> dataType:TextCardWithRightAndLeftTitle,type:header8
-
-    TEXT_CARD_FOOTER1: 9,
-
-    TEXT_CARD_FOOTER2: 10, //type:textCard -> dataType:TextCard,type:footer2
-
-    TEXT_CARD_FOOTER3: 11, //type:textCard -> dataType:TextCardWithTagId,type:footer3
-
-    BANNER: 12, //type:banner -> dataType:Banner
-
-    BANNER3: 13, //type:banner3-> dataType:Banner
-
-    FOLLOW_CARD: 14, //type:followCard -> dataType:FollowCard -> type:video -> dataType:VideoBeanForClient
-
-    TAG_BRIEFCARD: 15, //type:briefCard -> dataType:TagBriefCard
-
-    TOPIC_BRIEFCARD: 16, //type:briefCard -> dataType:TopicBriefCard
-
-    COLUMN_CARD_LIST: 17, //type:columnCardList -> dataType:ItemCollection
-
-    VIDEO_SMALL_CARD: 18, //type:videoSmallCard -> dataType:VideoBeanForClient
-
-    INFORMATION_CARD: 19, //type:informationCard -> dataType:InformationCard
-
-    AUTO_PLAY_VIDEO_AD: 20, //type:autoPlayVideoAd -> dataType:AutoPlayVideoAdDetail
-
-    HORIZONTAL_SCROLL_CARD: 21, //type:horizontalScrollCard -> dataType:HorizontalScrollCard
-
-    SPECIAL_SQUARE_CARD_COLLECTION: 22, //type:specialSquareCardCollection -> dataType:ItemCollection
-
-    UGC_SELECTED_CARD_COLLECTION: 23, //type:ugcSelectedCardCollection -> dataType:ItemCollection
-
-    MAX: 100   //避免外部其他类型与此处包含的某个类型重复。
-  }
-
-  public static readonly URL = {
+  public static readonly url: URL = {
     AUTHOR_LOGIN: "http://open.eyepetizer.net/#!/login",
 
     AUTHOR_REGISTER: "http://open.eyepetizer.net/#!/register",
@@ -136,4 +92,58 @@ export const enum PageState {
  */
 export const enum ContentType {
   JSON = 'application/json'
+}
+
+export const enum itemViewType  {
+  UNKNOWN= -1, //未知类型，使用EmptyViewHolder容错处理。
+
+  CUSTOM_HEADER= 0, //自定义头部类型。
+
+  TEXT_CARD_HEADER1= 1,
+
+  TEXT_CARD_HEADER2= 2,
+
+  TEXT_CARD_HEADER3= 3,
+
+  TEXT_CARD_HEADER4= 4, //type:textCard -> dataType:TextCard,type:header4
+
+  TEXT_CARD_HEADER5= 5, //type:textCard -> dataType:TextCard -> type:header5
+
+  TEXT_CARD_HEADER6= 6,
+
+  TEXT_CARD_HEADER7= 7, //type:textCard -> dataType:TextCardWithRightAndLeftTitle,type:header7
+
+  TEXT_CARD_HEADER8= 8, //type:textCard -> dataType:TextCardWithRightAndLeftTitle,type:header8
+
+  TEXT_CARD_FOOTER1= 9,
+
+  TEXT_CARD_FOOTER2= 10, //type:textCard -> dataType:TextCard,type:footer2
+
+  TEXT_CARD_FOOTER3= 11, //type:textCard -> dataType:TextCardWithTagId,type:footer3
+
+  BANNER= 12, //type:banner -> dataType:Banner
+
+  BANNER3= 13, //type:banner3-> dataType:Banner
+
+  FOLLOW_CARD= 14, //type:followCard -> dataType:FollowCard -> type:video -> dataType:VideoBeanForClient
+
+  TAG_BRIEFCARD= 15, //type:briefCard -> dataType:TagBriefCard
+
+  TOPIC_BRIEFCARD= 16, //type:briefCard -> dataType:TopicBriefCard
+
+  COLUMN_CARD_LIST= 17, //type:columnCardList -> dataType:ItemCollection
+
+  VIDEO_SMALL_CARD= 18, //type:videoSmallCard -> dataType:VideoBeanForClient
+
+  INFORMATION_CARD= 19, //type:informationCard -> dataType:InformationCard
+
+  AUTO_PLAY_VIDEO_AD= 20, //type:autoPlayVideoAd -> dataType:AutoPlayVideoAdDetail
+
+  HORIZONTAL_SCROLL_CARD= 21, //type:horizontalScrollCard -> dataType:HorizontalScrollCard
+
+  SPECIAL_SQUARE_CARD_COLLECTION= 22, //type:specialSquareCardCollection -> dataType:ItemCollection
+
+  UGC_SELECTED_CARD_COLLECTION= 23, //type:ugcSelectedCardCollection -> dataType:ItemCollection
+
+  MAX= 100   //避免外部其他类型与此处包含的某个类型重复。
 }

@@ -1,11 +1,13 @@
 /**
  * MainAbility的ViewModel
  */
+import { TabItem } from '../common/model/TabItem';
+
 export class MainViewModel {
   /**
    * 首页底部Tab显示数据
    */
-  tabTitle = [
+  tabTitle: Array<TabItem> = [
     {
       index: 0,
       title: "首页",

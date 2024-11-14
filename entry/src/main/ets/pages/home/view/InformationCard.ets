@@ -26,7 +26,7 @@ export struct InformationCard {
       Stack() {
         Column({ space: "13vp" }) {
 
-          ForEach(this.data.data?.titleList, (title, index) => {
+          ForEach(this.data.data?.titleList, (title:string) => {
             Text(title)
               .fontColor($r("app.color.color_333333"))
               .fontSize("12fp")

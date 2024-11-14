@@ -5,6 +5,7 @@ import { HomeItem } from './HomeItem';
 import { ItemList } from '../../model/HomeModel';
 import { EyepetizerApi } from '../../http/EyepetizerApi';
 import dailyViewModel from '../../viewmodel/home/DailyViewModel';
+import { CommonType } from '@ohos/pulltorefresh/src/main/ets/components/PullToRefresh/TypeAlias';
 
 const pointSpace = 30;
 const pointJitterAmplitude = 10;
@@ -19,7 +20,7 @@ export struct DailyPage {
   private value1: number[] = [];
   private value2: number[] = [];
   private url: string = EyepetizerApi.HOME_DAILY
-  private nextPageUrl?: string = null
+  private nextPageUrl?: string = ""
   @State data: ItemList[] = []
   @State isTheEnd: boolean = false
 
@@ -30,7 +31,7 @@ export struct DailyPage {
     this.getData(false)
   }
 
-  getData(onRefresh: boolean) {
+  getData(onRefresh: boolean): Promise<void> {
     return dailyViewModel.getDailyData(this.nextPageUrl, (result) => {
       if (onRefresh) {
         this.data = result.itemList
@@ -55,12 +56,12 @@ export struct DailyPage {
         // 可选项，组件属性配置，具有默认值
         refreshConfigurator: this.refreshConfigurator,
         // 可选项，下拉刷新回调
-        onRefresh: () => {
-          return this.getData(true)
+        onRefresh: (): Promise<void> => {
+          return this.getData(true);
         },
         // 可选项，上拉加载更多回调
-        onLoadMore: () => {
-          return this.getData(false)
+        onLoadMore: (): Promise<void> => {
+          return this.getData(false);
         },
         // 可选项，自定义下拉刷新动画布局
         customRefresh: () => {
@@ -108,7 +109,7 @@ export struct DailyPage {
             this.value2.push(value);
           }
         },
-        customLoad: null,
+        // customLoad: null,
       })
     }
   }

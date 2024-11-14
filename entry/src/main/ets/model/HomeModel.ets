@@ -1,3 +1,4 @@
+import { CommonType } from '@ohos/pulltorefresh/src/main/ets/components/PullToRefresh/TypeAlias';
 import { Cover, Follow } from './VideoBeanForClient';
 
 /**
@@ -15,8 +16,8 @@ export interface HomeModel {
 export interface ItemList {
   type?: string;
   data?: Data;
-  trackingData?: any;
-  tag?: any;
+  trackingData?: CommonType;
+  tag?: CommonType;
   id?: number;
   adIndex?: number;
 }
@@ -28,8 +29,8 @@ export interface Data {
   header?: Header;
   itemList?: ItemList[];
   count?: number;
-  adTrack?: any;
-  footer?: any;
+  adTrack?: CommonType;
+  footer?: CommonType;
   text?: string;
   follow?: Follow;
   rightText?: string;
@@ -55,14 +56,14 @@ export interface Header {
   subTitle?: string;
   subTitleFont?: string;
   textAlign?: string;
-  cover?: any;
-  label?: any;
+  cover?: CommonType;
+  label?: CommonType;
   actionUrl?: string;
-  labelList?: any;
+  labelList?: CommonType;
   rightText?: string;
   icon?: string;
   iconType?: string;
-  description?: any;
+  description?: string;
   time?: number;
   showHateVideo?: boolean;
 }
@@ -71,8 +72,8 @@ export interface Header {
 export interface Content {
   type?: string;
   data?: Data;
-  trackingData?: any;
-  tag?: any;
+  trackingData?: CommonType;
+  tag?: CommonType;
   id?: number;
   adIndex?: number;
 }
@@ -81,7 +82,7 @@ export interface Label {
   actionUrl?: string;
   text?: string;
   card?: string;
-  detail?: any;
+  detail?: CommonType;
 }
 
 

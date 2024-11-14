@@ -10,7 +10,7 @@ export default struct FlowAutoPlayCard {
   @State index: number = -1
   @State isAutoPlay: boolean = true
   @State showControls: boolean = true
-  @State playUrl: string = ""
+  @State playUrl?: string = ""
 
   build() {
     RelativeContainer() {
@@ -104,7 +104,7 @@ export default struct FlowAutoPlayCard {
   }
 
   @Builder
-  followRowContent(resource: Resource, text: string) {
+  followRowContent(resource: Resource, text?: string) {
     Row() {
       Image(resource)
         .width($r('app.float.size_20'))
@@ -132,7 +132,7 @@ export default struct FlowAutoPlayCard {
           .height($r('app.float.size_210'))
       } else {
         Stack() {
-          Image(item.data.content.data.cover.feed)
+          Image(item?.data?.content?.data?.cover?.feed)
             .width("100%")
             .height($r('app.float.size_210'))
 
@@ -141,7 +141,7 @@ export default struct FlowAutoPlayCard {
             .height($r('app.float.size_45'))
             .onClick(() => {
               this.playIndex = index
-              this.playUrl = item.data.content.data.playUrl
+              this.playUrl = item?.data?.content?.data?.playUrl
             })
         }
       }

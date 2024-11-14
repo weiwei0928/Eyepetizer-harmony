@@ -32,7 +32,7 @@ export default struct FlowItemComponent {
             .fontSize(CommonConstant.FONT_SIZE_12)
             .fontColor($r('app.color.color_888888'))
           Blank()
-          Text(this.item?.data?.content?.data?.consumption?.collectionCount.toString())
+          Text(this.item?.data?.content?.data?.consumption?.collectionCount?.toString())
             .fontSize(CommonConstant.FONT_SIZE_12)
           Image($r('app.media.ic_favorite_border_black_20dp'))
             .objectFit(ImageFit.Contain)
@@ -64,14 +64,14 @@ export struct FlowItemComponentPreview {
           "header": {
             "id": 315396,
             "actionUrl": "eyepetizer://pgc/detail/303343704/?title=%E4%B9%8C%E8%8B%8F%E5%B0%91%E5%B9%B4&userType=NORMAL&tabIndex=0",
-            "labelList": null,
+            "labelList": '',
             "icon": "http://ali-img.kaiyanapp.com/f7892c6ac9d6e9611cbad07deeef172f.jpeg?image_process=image/auto-orient,1/resize,w_360/format,webp/interlace,1/quality,q_80",
             "iconType": "round",
             "time": 1661916434000,
             "showHateVideo": false,
             "followType": "user",
             "tagId": 0,
-            "tagName": null,
+            "tagName": '',
             "issuerName": "乌苏少年",
             "topShow": false
           },
@@ -137,11 +137,11 @@ export struct FlowItemComponentPreview {
               "cover": {
                 "feed": "http://ali-img.kaiyanapp.com/b91c10d2018fc84b2c7678c23693fc7d.jpeg?imageMogr2/quality/60/format/jpg",
                 "detail": "http://ali-img.kaiyanapp.com/b91c10d2018fc84b2c7678c23693fc7d.jpeg?imageMogr2/quality/60/format/jpg",
-                "blurred": null,
-                "sharing": null,
-                "homepage": null
+                "blurred": "",
+                "sharing": "",
+                "homepage": ""
               },
-              "selectedTime": null,
+              "selectedTime": 0,
               "checkStatus": "CHECKED",
               "area": "成都市",
               "city": "成都市",
@@ -153,27 +153,27 @@ export struct FlowItemComponentPreview {
               "width": 1920,
               "height": 1080,
               "addWatermark": true,
-              "recentOnceReply": null,
+              "recentOnceReply": undefined,
               "privateMessageActionUrl": "eyepetizer://privateMessage/detail?privateMessageId=-1&anotherUid=303343704&nick=%E4%B9%8C%E8%8B%8F%E5%B0%91%E5%B9%B4",
               "source": "",
               "playUrl": "http://baobab.kaiyanapp.com/api/v1/playUrl?vid=315396&resourceType=ugc_video&editionType=default&source=aliyun&playUrlType=url_oss&udid=ef57fbfab81bbdc2",
               "status": "ONLINE",
               "releaseTime": 1661916434000,
               "duration": 99,
-              "transId": null,
+              "transId": "",
               "type": "COMMON",
               "validateTaskId": "vi7TDqQqeQ4YZ4Eh9gipw9so-1wL7Mj",
               "playUrlWatermark": "http://baobab.kaiyanapp.com/api/v1/playUrl?vid=315396&resourceType=ugc_video&editionType=default&source=aliyun&playUrlType=play_url_watermark&udid=ef57fbfab81bbdc2"
             },
-            "trackingData": null,
-            "tag": null,
+            "trackingData": "",
+            "tag": "",
             "id": 0,
             "adIndex": -1
           },
-          "adTrack": null
+          "adTrack": ""
         },
-        "trackingData": null,
-        "tag": null,
+        "trackingData": "",
+        "tag": "",
         "id": 837358,
         "adIndex": -1
       } })

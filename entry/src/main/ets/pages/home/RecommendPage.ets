@@ -19,7 +19,7 @@ export struct RecommendPage {
   private value1: number[] = [];
   private value2: number[] = [];
   private url: string = EyepetizerApi.HOME_RECOMMEND
-  private nextPageUrl?: string = null
+  private nextPageUrl?: string = ''
   @State data: ItemList[] = []
   @State isTheEnd: boolean = false
 
@@ -30,7 +30,7 @@ export struct RecommendPage {
     this.getData(false)
   }
 
-  getData(onRefresh: boolean) {
+  getData(onRefresh: boolean): Promise<void> {
     return dailyViewModel.getDailyData(this.nextPageUrl, (result) => {
       if (onRefresh) {
         this.data = result.itemList
@@ -55,12 +55,12 @@ export struct RecommendPage {
         // 可选项，组件属性配置，具有默认值
         refreshConfigurator: this.refreshConfigurator,
         // 可选项，下拉刷新回调
-        onRefresh: () => {
-          return this.getData(true)
+        onRefresh: (): Promise<void> => {
+          return this.getData(true);
         },
         // 可选项，上拉加载更多回调
-        onLoadMore: () => {
-          return this.getData(false)
+        onLoadMore: (): Promise<void> => {
+          return this.getData(false);
         },
         // 可选项，自定义下拉刷新动画布局
         customRefresh: () => {
@@ -108,7 +108,7 @@ export struct RecommendPage {
             this.value2.push(value);
           }
         },
-        customLoad: null,
+        // customLoad: null,
       })
     }
   }

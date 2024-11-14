@@ -1,5 +1,6 @@
 import { PullToRefresh } from '@ohos/pulltorefresh/Index'
 import { PullToRefreshConfigurator } from '@ohos/pulltorefresh/Index'
+import { CommonType } from '@ohos/pulltorefresh/src/main/ets/components/PullToRefresh/TypeAlias';
 import { CommonConstant } from '../../../common/constant/CommonConstant';
 import { EyepetizerApi } from '../../../http/EyepetizerApi';
 import { Item } from '../../../model/FollowModel';
@@ -19,7 +20,7 @@ export struct FollowPage {
   private value1: number[] = [];
   private value2: number[] = [];
   private url: string = EyepetizerApi.FOLLOW_URL
-  private nextPageUrl?: string = null
+  private nextPageUrl?: string = ''
   @State data: Item[] = []
   @State isTheEnd: boolean = false
   @State playIndex: number = -1
@@ -31,7 +32,7 @@ export struct FollowPage {
     this.getData(false)
   }
 
-  getData(onRefresh: boolean) {
+  getData(onRefresh: boolean): Promise<void> {
     if (onRefresh) {
       this.nextPageUrl = this.url
     }
@@ -113,7 +114,7 @@ export struct FollowPage {
             this.value2.push(value);
           }
         },
-        customLoad: null,
+        // customLoad: null,
       })
     }
   }

@@ -47,6 +47,14 @@
     {
       "name": "guide_login_tips",
       "value": "点击登录即可评论及发布内容"
+    },
+    {
+      "name": "internet_reason_desc",
+      "value": "申请网络权限"
+    },
+    {
+      "name": "write_media_reason_desc",
+      "value": "缓存文件"
     }
   ]
 }
