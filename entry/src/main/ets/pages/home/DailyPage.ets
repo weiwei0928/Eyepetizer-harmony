@@ -5,7 +5,6 @@ import { HomeItem } from './HomeItem';
 import { ItemList } from '../../model/HomeModel';
 import { EyepetizerApi } from '../../http/EyepetizerApi';
 import dailyViewModel from '../../viewmodel/home/DailyViewModel';
-import { CommonType } from '@ohos/pulltorefresh/src/main/ets/components/PullToRefresh/TypeAlias';
 
 const pointSpace = 30;
 const pointJitterAmplitude = 10;

@@ -1,4 +1,4 @@
-import { CommonType } from '@ohos/pulltorefresh/src/main/ets/components/PullToRefresh/TypeAlias';
+import { CommonType } from '../common/TypeAlias';
 
 
 export type ResultCallback<T> = (result: T) => void

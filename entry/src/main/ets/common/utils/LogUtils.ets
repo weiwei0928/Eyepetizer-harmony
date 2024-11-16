@@ -1,6 +1,6 @@
 
 import hilog from '@ohos.hilog';
-import { CommonType } from '@ohos/pulltorefresh/src/main/ets/components/PullToRefresh/TypeAlias';
+import { CommonType } from '../TypeAlias';
 import printer from './Printer';
 
 const prefix: string = 'eyepetizer_harmony';

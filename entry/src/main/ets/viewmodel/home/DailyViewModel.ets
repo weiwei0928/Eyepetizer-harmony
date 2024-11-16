@@ -1,4 +1,3 @@
-import { CommonType } from '@ohos/pulltorefresh/src/main/ets/components/PullToRefresh/TypeAlias';
 import apiService from '../../http/ApiService';
 import { HomeModel } from '../../model/HomeModel';
 import { BaseViewModel, ResultCallback } from '../BaseViewModel';

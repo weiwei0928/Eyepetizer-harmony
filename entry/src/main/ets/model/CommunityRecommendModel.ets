@@ -1,4 +1,4 @@
-import { CommonType } from '@ohos/pulltorefresh/src/main/ets/components/PullToRefresh/TypeAlias';
+import { CommonType } from '../common/TypeAlias';
 import { Label } from './HomeModel';
 import { Consumption, Cover, Tag } from './VideoBeanForClient';
 
@@ -13,14 +13,14 @@ export interface CommunityRecommend {
 export interface ItemList {
   type?: string;
   data?: Data;
-  trackingData?: CommonType;
-  tag?: CommonType;
+  trackingData?: string;
+  tag?: string;
   id?: number;
   adIndex?: number;
 }
 
 export interface Data {
-  adTrack?: CommonType;
+  adTrack?: string;
   content?: Content;
   count?: number;
   dataType?: string;
@@ -39,7 +39,7 @@ export interface Header {
   labelList?: CommonType;
   showHateVideo?: boolean;
   tagId: number,
-  tagName: CommonType,
+  tagName: string,
   time?: number;
   topShow: boolean
 
@@ -48,8 +48,8 @@ export interface Header {
 export interface Content {
   type?: string;
   data?: DataX;
-  trackingData?: CommonType;
-  tag?: CommonType;
+  trackingData?: string;
+  tag?: string;
   id?: number;
   adIndex?: number;
 }
@@ -57,7 +57,7 @@ export interface Content {
 export interface ItemX {
   data?: DataXX;
   type?: string;
-  tag?: CommonType;
+  tag?: string;
   id?: number;
   adIndex?: number;
 }
@@ -90,10 +90,10 @@ export interface DataX {
   releaseTime?: number,
   resourceType?: string,
   selectedTime?: number,
-  status?: CommonType,
+  status?: string,
   title?: string;
   tags?: Tag[],
-  transId?: CommonType,
+  transId?: string,
   type?: string;
   uid?: number,
   updateTime?: number,
@@ -141,7 +141,7 @@ export interface RecentOnceReply {
 
 export interface DataXX {
   actionUrl?: string,
-  adTrack?: CommonType,
+  adTrack?: string,
   autoPlay?: boolean,
   bgPicture?: string,
   dataType?: string,
@@ -156,17 +156,17 @@ export interface DataXX {
   title?: string
 }
 export interface HeaderX {
-  actionUrl?: CommonType,
-  cover?: CommonType,
-  description?: CommonType,
-  font?: CommonType,
-  icon?: CommonType,
+  actionUrl?: string,
+  cover?: string,
+  description?: string,
+  font?: string,
+  icon?: string,
   id?: number,
-  label?: CommonType,
+  label?: string,
   labelList?: CommonType,
-  rightText?: CommonType,
-  subTitle?: CommonType,
+  rightText?: string,
+  subTitle?: string,
   subTitleFont?: CommonType,
   textAlign?: string,
-  title?: CommonType
+  title?: string
 }

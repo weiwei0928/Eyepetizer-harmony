@@ -1,4 +1,4 @@
-import { CommonType } from '@ohos/pulltorefresh/src/main/ets/components/PullToRefresh/TypeAlias'
+import { CommonType } from '../common/TypeAlias'
 import { CommunityRecommend } from '../model/CommunityRecommendModel'
 import { FollowModel } from '../model/FollowModel'
 import { HomeModel } from '../model/HomeModel'

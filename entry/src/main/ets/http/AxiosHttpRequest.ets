@@ -5,7 +5,7 @@ import axios, {
   InternalAxiosRequestConfig,
   AxiosError,
 } from "@ohos/axios";
-import { CommonType } from '@ohos/pulltorefresh/src/main/ets/components/PullToRefresh/TypeAlias';
+import { CommonType } from '../common/TypeAlias';
 import { loge } from '../common/utils/LogUtils';
 import showToast from '../common/utils/ToastUtil';
 

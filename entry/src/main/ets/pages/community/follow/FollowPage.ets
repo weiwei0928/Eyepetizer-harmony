@@ -1,6 +1,5 @@
 import { PullToRefresh } from '@ohos/pulltorefresh/Index'
 import { PullToRefreshConfigurator } from '@ohos/pulltorefresh/Index'
-import { CommonType } from '@ohos/pulltorefresh/src/main/ets/components/PullToRefresh/TypeAlias';
 import { CommonConstant } from '../../../common/constant/CommonConstant';
 import { EyepetizerApi } from '../../../http/EyepetizerApi';
 import { Item } from '../../../model/FollowModel';

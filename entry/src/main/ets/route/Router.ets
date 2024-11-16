@@ -1,5 +1,4 @@
 import router from '@ohos.router'
-import { CommonType } from '@ohos/pulltorefresh/src/main/ets/components/PullToRefresh/TypeAlias';
 import { loge, logInfo } from '../common/utils/LogUtils';
 
 export class Router {
